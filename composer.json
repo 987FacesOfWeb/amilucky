@@ -1,0 +1,14 @@
+{
+"autoload": {
+        "psr-4": {
+            "Router\\": "routes/",
+            "App\\": "app/",
+            "Database\\": "database/"
+    }
+},
+    "require": {
+        "pokemon-tcg/pokemon-tcg-sdk-php": "v2",
+      "ext-pdo": "*",
+                "mtgsdk/mtgsdk": "dev-master"
+    }
+}
