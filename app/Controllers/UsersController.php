@@ -103,7 +103,7 @@
             }
 
             //Contrôle si les deux password entrés correspondent
-            if($_POST['password'] != $_POST['passwordRepeat']) {
+            if($_POST['Password'] != $_POST['PasswordRepeat']) {
 
                 $_SESSION['errorRepeat'][] = 'Les mots de passe ne correspondent pas';
                 header('Location: /register');
@@ -113,11 +113,11 @@
                 $user = new UsersModel();
                 $allUsers = $user->findAll();
 
-                $fname = strip_tags($_POST['fname']);
-                $lname = strip_tags($_POST['lname']);
-                $username = strip_tags($_POST['username']);
-                $email = strip_tags($_POST['email']);
-                $pwd = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                $fname = strip_tags($_POST['Nom']);
+                $lname = strip_tags($_POST['Prénom']);
+                $username = strip_tags($_POST['Pseudo']);
+                $email = strip_tags($_POST['Email']);
+                $pwd = password_hash($_POST['Password'], PASSWORD_DEFAULT);
 
 
                 //Si la page est rechargée, ne doit pas créer deux fois le user
